@@ -1,0 +1,8 @@
+syntax: regexp
+Debug/*
+Release/*
+ipch/*
+syntax: glob
+Array VS Real Matrices and Vectors.opensdf
+Array VS Real Matrices and Vectors.sdf
+Array VS Real Matrices and Vectors.suo
