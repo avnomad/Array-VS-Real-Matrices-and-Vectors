@@ -1,23 +1,12 @@
 // Array VS Real Matrices and Vectors.cpp : main project file.
 
 #include "stdafx.h"
-
-using namespace System;
-#include <iostream>
 using std::cout;
-using std::cin;
-using std::cerr;
 using std::endl;
+using std::system;
 
-#include <fstream>
-using std::ofstream;
-
-#include <cstdlib>
-#include <math.h>
-
-
-using namespace ASL::DataStructures;
 using namespace ASL;
+using namespace ASL::DataStructures;
 
 
 double (*sinp)(double) = sin;
@@ -31,20 +20,20 @@ double add1(double x)
 
 int main(array<System::String ^> ^args)
 {
-	Console::ForegroundColor = System::ConsoleColor::Green;
+	System::Console::ForegroundColor = System::ConsoleColor::Green;
 
-	/*ASL::DataStructures::Array<double> A(25000000); 
-	ASL::DataStructures::Array<double> B;
+	Array<double> A(25000000); 
+	Array<double> B;
 
 	A = add1;
 	cout<<A.length()<<endl;
 	tic();
 	B = A.mapped(sinp).map(cosp).map(sinp);
-	toc();*/
+	toc();
 
-	ASL::Vector v,u;
+	Vector v,u;
 
-	v = ASL::C/1/25000000;
+	v = C/1/25000000;
 	cout<<length(v)<<endl;
 	tic();
 	u = sin(cos(sin(v)));
