@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array VS Real Matrices and Vectors", "Array VS Real Matrices and Vectors\Array VS Real Matrices and Vectors.vcxproj", "{9C31B97F-4DDF-4DC8-A6A3-34BD588D50D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C31B97F-4DDF-4DC8-A6A3-34BD588D50D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C31B97F-4DDF-4DC8-A6A3-34BD588D50D0}.Debug|Win32.Build.0 = Debug|Win32
+		{9C31B97F-4DDF-4DC8-A6A3-34BD588D50D0}.Release|Win32.ActiveCfg = Release|Win32
+		{9C31B97F-4DDF-4DC8-A6A3-34BD588D50D0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
