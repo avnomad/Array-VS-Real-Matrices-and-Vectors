@@ -11,7 +11,6 @@ double add1(double x)
 
 namespace ArrayVSRealMatricesandVectors {
 
-	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
@@ -68,10 +67,9 @@ namespace ArrayVSRealMatricesandVectors {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(292, 273);
+			this->ClientSize = System::Drawing::Size(512, 273);
 			this->Name = L"Form1";
 			this->Text = L"Form1";
-
 			this->ResumeLayout(false);
 
 		}
@@ -79,26 +77,31 @@ namespace ArrayVSRealMatricesandVectors {
 
 		void execute()
 		{
-			unsigned int c;
-			ASL::DataStructures::Array<double> A(25000000);
-			ASL::DataStructures::Array<double> B;
+			using namespace ASL;
+			using namespace ASL::DataStructures;
+
+			std::ostringstream sout;
+
+			Array<double> A(25000000);
+			Array<double> B;
+
 
 			A = add1;
-			c = clock();
+			tic();
 			B = A.mapped(sinp).map(cosp).map(sinp);
-			c = clock() - c;
-			Form1::Text = L"";
-			Form1::Text += c;
-			Form1::Text += L" - ";
+			toc(sout);
 
-			ASL::Vector v,u;
+			sout << " - ";
 
-			v = ASL::C/1/25000000;
-			c = clock();
+			Vector v,u;
+
+			v = C/1/25000000;
+			tic();
 			u = sin(cos(sin(v)));
-			c = clock() - c;
-			Form1::Text += c;
-		}
+			toc(sout);
+
+			this->Text = gcnew System::String(sout.str().c_str());
+		} // end method execute
 	
 	};
 }
